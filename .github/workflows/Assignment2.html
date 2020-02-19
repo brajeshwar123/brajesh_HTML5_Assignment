@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+ <!--
+ *****************HTML5 code for topgear Assignment-2 *********
+ **************** Name: Brajeshwar Nath Mishra *****************
+ **************** Emp id: 20055187 ************************
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Xena Events</title>
+<style>
+		body {
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+				background-color: #CFC2BF;
+		}
+</style>
+</head>
+
+<body>
+<canvas id="myCanvas" width="210" height="170" style="border:1px;"></canvas>
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("Xena Events",10,60);
+//var img = document.getElementById("scream");
+//ctx.drawImage(img, 10, 60);
+make_base();
+
+//
+function make_base()
+{
+base_image = new Image();
+  base_image.src = 'Logo.png';
+  base_image.onload = function(){
+    ctx.drawImage(base_image, 0,0);
+}
+}
+</script>
+
+<h1>Ballon Riding Event</h1>
+<form>
+ Name: <input type="text" name="name" required placeholder="Enter Name"><br><br>
+ Age: &nbsp;&nbsp; <input type="number" name="age"  min="18" required placeholder="Enter Age"><br><br>
+ E-mail: <input type="email" name="Email" required placeholder="Enter a valid email"><br><br>
+ City:&nbsp;&nbsp; <input list="city" name="city" required placeholder="Enter City">
+  <datalist id="city">
+    <option value="Rajkot">
+    <option value="Vizag">
+    <option value="Bangalore">
+  </datalist><br><br>
+<button>submit</button>
+</form>
+</body>
+
+</html> 

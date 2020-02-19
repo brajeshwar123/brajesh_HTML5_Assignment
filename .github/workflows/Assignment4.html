@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+ <!--
+ *****************HTML5 code for topgear Assignment-4 *********
+ **************** Name: Brajeshwar Nath Mishra *****************
+ **************** Emp id: 20055187 ************************
+ -->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCCI</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            canvas {
+                border: 5px solid black;
+                border-radius: 30px;
+                padding: 20px;
+                background-color: azure
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2 style="font-style: italic;">Board of Control for Cricket in India </h2>
+        <p style="font-style: italic;">T20 Cricket Match Batting Statistics</p>
+
+        <canvas id="bcci" width="500" height="400"></canvas>
+
+        <script>
+            var dID = document.getElementById('bcci');
+            var context = dID.getContext('2d');
+
+            context.font = '15px Arial';
+            context.lineWidth = 1.5;
+            context.beginPath();
+            context.moveTo(140,370);
+            context.lineTo(140,0);
+            context.moveTo(240,370);
+            context.lineTo(240,0);
+            context.moveTo(340,370);
+            context.lineTo(340,0);
+            context.moveTo(440,370);
+            context.lineTo(440,0);
+            context.moveTo(40,315);
+            context.lineTo(500,315);
+            context.moveTo(40,265);
+            context.lineTo(500,265);
+            context.moveTo(40,215);
+            context.lineTo(500,215);
+            context.moveTo(40,165);
+            context.lineTo(500,165);
+            context.moveTo(40,115);
+            context.lineTo(500,115);
+            context.moveTo(40,65);
+            context.lineTo(500,65);
+            context.moveTo(40,15);
+            context.strokeStyle = 'black';
+            context.stroke();
+
+            context.beginPath();
+            context.moveTo(40,400);
+            context.lineTo(40,0);
+            context.moveTo(0,370);
+            context.lineTo(500,370);
+            context.strokeStyle = 'black';
+            context.stroke();
+
+            context.strokeText('240',0,70);
+            context.strokeText('200',0,120);
+            context.strokeText('160',0,170);
+            context.strokeText('120',0,220);
+            context.strokeText('80',8,270);
+            context.strokeText('40',8,320);
+
+            context.strokeText('0',16,395);
+            context.strokeText('5',136,395);
+            context.strokeText('10',231,395);
+            context.strokeText('15',332,395);
+			context.strokeText('20',431,395);
+
+            context.beginPath();
+            context.font = 'bold 11px Arial';
+            context.fillStyle = '#F33F0A';
+            context.fillText('RUNS ^',50,10);
+            context.fillText('OVERS >',50,400);
+
+			context.beginPath();
+            context.strokeStyle = '#0A15F3';
+            context.arc(140,315,2,0,2*Math.PI);
+            context.arc(240,275,2,0,2*Math.PI);
+            context.arc(340,190,2,0,2*Math.PI);
+            context.stroke();
+        </script>
+
+    </body>
+</html>
